@@ -1,0 +1,38 @@
+- Hi priority todo: in game class, words and letters should be
+case-INSENSITIVE.  
+   - Need specs for this
+   - Then copy specs to public/spec/ with :pending => true on each
+   example
+   - And change reference solution code accordingly to pass them
+
+- Hi priority: gutting of solutions/app.rb and solutions/views into public/
+  - Goal is have something that is Heroku-ready as-provided
+  - Must preserve /create hack that lets you force a word, so we should
+  provide that method
+  - Should preserve the code needed to load/register Flash gem
+  - scaffolding talks about '/new' so maybe leave New action and view,
+  but leave the <form> action blank for the Create New Game form
+  - leave skeletons of other views to make sure HTML id's/classes are
+  correct?
+  - shoudl we gut form action from show.erb? what about <%= @game %>
+  stuff in that view?  We can leave win and lose as examples of what to do?
+
+Nice to have/low pri:
+
+- Can we create a trivial autograder for Part 1 (deploy toy app to
+Heroku) as follows:
+   - student submits Heroku appname of toy app
+   - autograder verifies toy app is up (GET '/' should result in page
+   containing <h1>Hello World</h1>)
+   - if good, autograder delivers a magic token consisting of the app's
+   name DES'd against the string "cs169" (eg:
+   "app-name".crypt("cs169"))
+   - to continue w/part 2, student must provide appname and matching
+   token to download HW skeleton?  what do you think?
+
+- Should we autograde the intermediate step of having working app logic
+(hangperson_game_spec)?   Currently the README implies yes, students
+should submit hangperson_game.rb class.
+
+- THe self-checks marked "Self-check(*)" can actually be entered into
+edX as short-answer questions!

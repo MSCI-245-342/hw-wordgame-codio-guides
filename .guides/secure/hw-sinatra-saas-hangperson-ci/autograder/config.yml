@@ -1,0 +1,11 @@
+# These files are required and the autograde won't run without them.
+required_files:
+  - sinatra-url.txt
+
+# This will search the following directories for required files
+# If found, then it will copy the files to the required place.
+# Designed to reduce common student mistakes.
+search_paths:
+  - lib/
+  - hw-sinatra-saas-hangperson/
+  - hw-sinatra-saas-hangperson/lib/

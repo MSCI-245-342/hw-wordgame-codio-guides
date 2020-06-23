@@ -1,0 +1,33 @@
+[
+ {
+  "type": "test",
+  "taskId": "test-3203105733",
+  "source": {
+   "name": "Grader",
+   "showName": false,
+   "instructions": "To submit your deployed Heroku app, paste the URL into the file on the left (it should look something like `my-app-12345.herokuapp.com`).\n\nVisit the same URL that you put into the text file with your web browser to be sure that your app is running correctly at that address before submitting the text file.\n\nSubmit by clicking the button below.",
+   "command": ".guides/gradescope.py sinatra-url.txt",
+   "arePartialPointsAllowed": true,
+   "timeoutSeconds": 40,
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "points": 100,
+   "oneTimeTest": false,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Advanced Code Test"
+     }
+    ],
+    "files": [
+     "sinatra-url.txt",
+     "hw-sinatra-saas-hangperson/lib/hangperson_game.rb"
+    ],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
+ }
+]

@@ -1,0 +1,135 @@
+{
+ "sections": [
+  {
+   "id": "a5d435a8-918e-6ae1-0922-7c3e004c6789",
+   "title": "Part 0: Demystifying SaaS app creation",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    }
+   ],
+   "layout": "1-panel",
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-0--Demystifying-SaaS-app-creation-a5d4.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "069e8488-479a-319b-89bb-7296436dc78f",
+   "title": "Part 1: Hangperson",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-1--Hangperson-069e.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "befa21ce-d747-044b-c03b-04dd3bea8d33",
+   "title": "Part 2: RESTful thinking for HangPerson",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-2--RESTful-thinking-for-HangPerson-befa.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "9ef3db72-48ad-691d-eed9-35b46aa33549",
+   "title": "Part 3: Connecting HangpersonGame to Sinatra",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-3--Connecting-HangpersonGame-to-Sinatra-9ef3.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "0c640f63-d683-28b0-17bd-7980891e0e1d",
+   "title": "Part 4: Introducing Cucumber",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-4--Introducing-Cucumber-0c64.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "67a15c3a-771a-097d-ad1a-476c23205115",
+   "title": "Part 5: Corner Cases",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "sinatra-url.txt",
+     "panel": 0,
+     "action": "open"
+    }
+   ],
+   "layout": "2-panels",
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Part-5--Corner-Cases-67a1.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "5376c0ec-7cfc-e4b9-38c2-c578f69ce194",
+   "title": "Conclusion",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    }
+   ],
+   "layout": "1-panel",
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Conclusion-5376.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
+   "id": "1d4bc450-dd0e-5a86-3e94-bb45ae202247",
+   "title": "Optional challenge assignment",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Optional-challenge-assignment-1d4b.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  }
+ ],
+ "theme": "light",
+ "scripts": [],
+ "lexikonTopic": "",
+ "suppressPageNumbering": true,
+ "useSubmitButtons": true,
+ "useMarkAsComplete": true,
+ "hideMenu": false,
+ "allowGuideClose": false,
+ "collapsedOnStart": false,
+ "hideSectionsToggle": false,
+ "hideBackToDashboard": false,
+ "protectLayout": false
+}
