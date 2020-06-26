@@ -63,6 +63,8 @@ The first command stages all changed files for committing. The second command co
 <br />
 <details><summary>After running <code>bundle</code>, why are there gems listed in <code>Gemfile.lock</code>that were not listed in <code>Gemfile</code>?</summary><p><blockquote>Bundler looked up the information for each Gem you requested (in this case, only <code>sinatra</code>) and realized that it depends on other gems, which in turn depend on still others, so it recursively installed all those dependencies.  For example, the <code>rack</code> appserver is a gem, and while you didn't explicitly request it, <code>sinatra</code> depends on it.  This is an example of the power of automation: rather than requiring you (the app developer) to understand every Gem dependency, Bundler automates that process and lets you focus only on your app's top-level dependencies.</blockquote></p></details>
 
+{Check It!|assessment}(multiple-choice-3608127739)
+
 
 Create a simple SaaS app with Sinatra
 -------------------------------------

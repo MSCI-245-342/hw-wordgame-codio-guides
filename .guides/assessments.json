@@ -154,5 +154,49 @@
    "bloomsObjectiveLevel": "",
    "learningObjectives": ""
   }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-3608127739",
+  "source": {
+   "name": "why self check",
+   "showName": false,
+   "instructions": "Why is it important that you actually self-test yourself and view the answers to all self-check questions?  Select all that apply. (This is a graded question worth points.)",
+   "multipleResponse": true,
+   "answers": [
+    {
+     "_id": "604907b7-afbe-9f82-dabe-102f14f6d722",
+     "correct": true,
+     "answer": "Self-check questions contain important content that if you don't open them, you will miss."
+    },
+    {
+     "_id": "7b209772-2766-830c-9da3-456522a1331f",
+     "correct": true,
+     "answer": "By thinking about the question and trying to answer it yourself before viewing the answer, you can see if you are ready to proceed with the assignment.  If I don't understand the self-check question and answer, then I know that I need to study the material more before proceeding, or I should seek help."
+    },
+    {
+     "_id": "c5720733-ac1a-b806-8275-7ccefa2cc97f",
+     "correct": false,
+     "answer": "Self-check questions award points for opening the little triangles."
+    }
+   ],
+   "guidance": "Self-check questions with the little triangles are for your benefit and are not graded.  Even though they are not graded, they should be taken seriously.  Further progress in the course and/or assignment is often difficult if you don't understand the question and answer.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
  }
 ]
