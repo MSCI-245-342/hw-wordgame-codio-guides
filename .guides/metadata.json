@@ -1,6 +1,18 @@
 {
  "sections": [
   {
+   "id": "5c7fe886-ec3f-e513-e6eb-602ba97b70c6",
+   "title": "Overview",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Overview-5c7f.md",
+   "chapter": false,
+   "reset": [],
+   "teacherOnly": false,
+   "learningObjectives": ""
+  },
+  {
    "id": "a5d435a8-918e-6ae1-0922-7c3e004c6789",
    "title": "Part 0: Demystifying SaaS app creation",
    "files": [
@@ -20,11 +32,11 @@
   },
   {
    "id": "069e8488-479a-319b-89bb-7296436dc78f",
-   "title": "Part 1: Hangperson",
+   "title": "Part 1: WordGame",
    "files": [],
    "path": [],
    "type": "markdown",
-   "content-file": ".guides/content/Part-1--Hangperson-069e.md",
+   "content-file": ".guides/content/Part-1--WordGame-069e.md",
    "chapter": false,
    "reset": [],
    "teacherOnly": false,
@@ -32,11 +44,11 @@
   },
   {
    "id": "befa21ce-d747-044b-c03b-04dd3bea8d33",
-   "title": "Part 2: RESTful thinking for HangPerson",
+   "title": "Part 2: RESTful thinking for WordGame",
    "files": [],
    "path": [],
    "type": "markdown",
-   "content-file": ".guides/content/Part-2--RESTful-thinking-for-HangPerson-befa.md",
+   "content-file": ".guides/content/Part-2--RESTful-thinking-for-WordGame-befa.md",
    "chapter": false,
    "reset": [],
    "teacherOnly": false,
@@ -44,11 +56,11 @@
   },
   {
    "id": "9ef3db72-48ad-691d-eed9-35b46aa33549",
-   "title": "Part 3: Connecting HangpersonGame to Sinatra",
+   "title": "Part 3: Connecting WordGame to Sinatra",
    "files": [],
    "path": [],
    "type": "markdown",
-   "content-file": ".guides/content/Part-3--Connecting-HangpersonGame-to-Sinatra-9ef3.md",
+   "content-file": ".guides/content/Part-3--Connecting-WordGame-to-Sinatra-9ef3.md",
    "chapter": false,
    "reset": [],
    "teacherOnly": false,

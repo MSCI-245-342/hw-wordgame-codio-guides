@@ -20,10 +20,10 @@ Since a SaaS server is simulated by issuing HTTP requests, and its behavior can 
 
 #### Self Check Questions
 
-<details><summary>Read the section on "Using Capybara with Cucumber" on Capybara's home page.  Which step definitions use Capybara to simulate the server as a browser would?  Which step definitions use Capybara to inspect the app's response to the stimulus?</summary><p><blockquote>Step definitions that use <code>visit</code>, <code>click_button</code>, <code>fill_in</code> are simulating a browser by visiting a page and/or filling in a form on that page and clicking its buttons.  Those that use <code>have_content</code> are inspecting the output.</blockquote></p></details>
+<details><summary>Read the sections on "Using Capybara with Cucumber" and "The DSL" on Capybara's home page.  Which step definitions use Capybara to simulate the server as a browser would?  Which step definitions use Capybara to inspect the app's response to the stimulus?</summary><p><blockquote>Step definitions that use <code>visit</code>, <code>click_button</code>, <code>fill_in</code> are simulating a browser by visiting a page and/or filling in a form on that page and clicking its buttons.  Those that use <code>have_content</code> are inspecting the output.</blockquote></p></details>
 <br />
 
-<details><summary>Looking at <code>features/guess.feature</code>, what is the role of the three lines following the "Feature:" heading?</summary><p><blockquote>They are comments showing the purpose and actors of this story. Cucumber won't execute them.</blockquote></p></details>
+<details><summary>Back in our project, look at the file <code>features/guess.feature</code>. What is the role of the three lines following the "Feature:" heading?</summary><p><blockquote>They are comments showing the purpose and actors of this story. Cucumber won't execute them.</blockquote></p></details>
 <br />
 
 <details><summary>In the same file, looking at the scenario step <code>Given I start a new game with word "garply"</code>, what lines in <code>game_steps.rb</code> will be invoked when Cucumber tries to execute this step, and what is the role of the string <code>"garply"</code> in the step?</summary><p><blockquote>Lines 13-16 of the file will execute.  Since a step is chosen by matching a regular expression, <code>word</code> will match the first (and in this case only) parenthesis capture group in the regexp, which in this example is <code>garply</code>.</blockquote></p></details>
@@ -48,7 +48,7 @@ $ cucumber features/start_new_game.feature
 If you get an error about Cucumber like this one, just follow the advice and run `bundle install` first.
 
 ```sh
-~/workspace/hw-sinatra-saas-hangperson (master) $ cucumber features/start_new_game.feature
+~/workspace/hw-wordgame-githubusername (master) $ cucumber features/start_new_game.feature
 Could not find proper version of cucumber (2.0.0) in any of the sources
 Run `bundle install` to install missing gems.
 ```
@@ -57,8 +57,8 @@ The scenario fails because the `<form>` tag in `views/new.erb` is incorrect and 
 
 The create-new-game code in the Sinatra app should do the following:
 
-* Call the HangpersonGame class method `get_random_word`
-* Create a new instance of HangpersonGame using that word
+* Call the WordGame class method `get_random_word`
+* Create a new instance of WordGame using that word
 * Redirect the browser to the `show` action
 
 View how these steps are actualized in the app.rb file under the `post /create do` route.
@@ -72,7 +72,7 @@ Now stage and commit all files locally, then `git push heroku master` to deploy 
 Develop the scenario for guessing a letter
 -------------------------------------------
 
-For this scenario, in `features/guess.feature`, we've already provided a correct  `show.erb` HTML file that submits the player's guess to the `guess` action.  You already have a `HangpersonGame#guess` instance method that has the needed functionality.
+For this scenario, in `features/guess.feature`, we've already provided a correct  `show.erb` HTML file that submits the player's guess to the `guess` action.  You already have a `WordGame#guess` instance method that has the needed functionality.
 
 #### Self Check Question
 

@@ -3,7 +3,7 @@ Note: Part 2 is just reading/background info for Part 3.
 
 **Goals:**  Understand how to expose your app's behaviors as RESTful actions in a SaaS environment, and how to preserve game state across (stateless) HTTP requests to your app using the appserver's provided abstraction for cookies.
 
-**What you will do:** Create a Sinatra app that makes use of the HangpersonGame logic developed in the previous part, allowing you to play Hangperson via  a browser.
+**What you will do:** Create a Sinatra app that makes use of the WordGame logic developed in the previous part, allowing you to play the game via  a browser.
 
 Game State
 ----------
@@ -21,7 +21,7 @@ In most SaaS apps, the amount of information associated with a user's session is
 
 #### Self Check Question
 
-<details><summary>Enumerate the minimal game state that must be maintained during a game of Hangperson.</summary><p><blockquote>The secret word; the list of letters that have been guessed correctly; the list of letters that have been guessed incorrectly.  Conveniently, the well-factored HangpersonGame class encapsulates this state using its instance variables, as proper object-oriented design recommends.</blockquote></p></details>
+<details><summary>Enumerate the minimal game state that must be maintained during our word guessing game.</summary><p><blockquote>The secret word; the list of letters that have been guessed correctly; the list of letters that have been guessed incorrectly.  Conveniently, the well-factored WordGame class encapsulates this state using its instance variables, as proper object-oriented design recommends.</blockquote></p></details>
 
 The game as a RESTful resource
 ------------------------------
@@ -52,7 +52,7 @@ Our initial list of operations on the resource might look like this, where we've
 
 <br />
 
-HTTP is a request-reply protocol and the Web browser is fundamentally a request-reply user interface, so each action by the user must result in something being displayed by the browser.  For the "show status of current game" action, it's pretty clear that what we should show is the HTML representation of the current game, as the `word_with_guesses` method of our game class does. (In a fancier implementation, we would arrange to draw an image of part of the hanging person.)
+HTTP is a request-reply protocol and the Web browser is fundamentally a request-reply user interface, so each action by the user must result in something being displayed by the browser.  For the "show status of current game" action, it's pretty clear that what we should show is the HTML representation of the current game, as the `word_with_guesses` method of our game class does. 
 
 But when the player guesses a letter--whether the guess is correct or not--what should be the "HTML representation" of the result of that action?
 
@@ -100,10 +100,10 @@ We will see this pattern mirrored later in Rails: a typical resource (such as th
 
 #### Self Check Questions
 
-<details><summary>Why is it appropriate for the <code>new</code> action to use<CODE>GET</CODE> rather than <CODE>POST</CODE>?</summary><p><blockquote>The <code>new</code> action doesn't by itself cause any state change: it justreturns a form that the player can submit.</blockquote></p></details>
+<details><summary>Why is it appropriate for the <code>new</code> action to use<CODE>GET</CODE> rather than <CODE>POST</CODE>?</summary><p><blockquote>The <code>new</code> action doesn't by itself cause any state change: it just returns a form that the player can submit.</blockquote></p></details>
 <br />
 
-<details><summary>Explain why the <code>GET /new</code> action wouldn't be needed ifyour Hangperson game was called as a service in a true service-orientedarchitecture. </summary><p><blockquote>In a true SOA, the service that calls Hangperson can generate an HTTP<CODE>POST</CODE> request directly.  The only reason for the <code>new</code> action is toprovide the human Web user a way to generate that request.</blockquote></p></details>
+<details><summary>Explain why the <code>GET /new</code> action wouldn't be needed if your Hangperson game was called as a service in a true service-orientedarchitecture. </summary><p><blockquote>In a true SOA, the service that calls Hangperson can generate an HTTP <CODE>POST</CODE> request directly.  The only reason for the <code>new</code> action is to provide the human Web user a way to generate that request.</blockquote></p></details>
 <br />
 
 Lastly, when the game is over (whether win or lose), we shouldn't be accepting any more guesses.  Since we're planning for our `show` page to include a letter-guess form, perhaps we should have a different type of `show` action when the game has ended---one that does **not** include a way for the player to guess a letter, but (perhaps) does include a button to start a new game.  We can even have separate pages for winning and losing, both of which give the player the chance to start a new game.  Since the `show` action can certainly tell if the game is over, it can conditionally redirect to the `win` or `lose` action when called.

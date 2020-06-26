@@ -2,52 +2,58 @@
  "name": "hw-sinatra-saas-hangperson",
  "children": [
   {
+   "title": "Overview",
+   "id": "f5fc1e73-a3b9-441e-b812-bfaf791f7291",
+   "type": "page",
+   "pageId": "5c7fe886-ec3f-e513-e6eb-602ba97b70c6"
+  },
+  {
    "title": "Part 0: Demystifying SaaS app creation",
    "id": "25eb23ed-c6c1-ac36-76a5-3b2d69e9d52a",
    "type": "page",
    "pageId": "a5d435a8-918e-6ae1-0922-7c3e004c6789"
   },
   {
+   "title": "Part 1: WordGame",
    "id": "997968fa-ab3c-1af6-2951-0fc31ecb2a8b",
-   "title": "Part 1: Hangperson",
-   "pageId": "069e8488-479a-319b-89bb-7296436dc78f",
-   "type": "page"
+   "type": "page",
+   "pageId": "069e8488-479a-319b-89bb-7296436dc78f"
   },
   {
+   "title": "Part 2: RESTful thinking for WordGame",
    "id": "83d12fe1-3c0c-1a82-b72a-bcfc2a412fae",
-   "title": "Part 2: RESTful thinking for HangPerson",
-   "pageId": "befa21ce-d747-044b-c03b-04dd3bea8d33",
-   "type": "page"
+   "type": "page",
+   "pageId": "befa21ce-d747-044b-c03b-04dd3bea8d33"
   },
   {
+   "title": "Part 3: Connecting WordGame to Sinatra",
    "id": "0acd3fde-1c6f-1676-de82-a55f3aa3d127",
-   "title": "Part 3: Connecting HangpersonGame to Sinatra",
-   "pageId": "9ef3db72-48ad-691d-eed9-35b46aa33549",
-   "type": "page"
+   "type": "page",
+   "pageId": "9ef3db72-48ad-691d-eed9-35b46aa33549"
   },
   {
-   "id": "480ddaaa-fcd4-6c0a-1be2-74bb1688a8e5",
    "title": "Part 4: Introducing Cucumber",
-   "pageId": "0c640f63-d683-28b0-17bd-7980891e0e1d",
-   "type": "page"
+   "id": "480ddaaa-fcd4-6c0a-1be2-74bb1688a8e5",
+   "type": "page",
+   "pageId": "0c640f63-d683-28b0-17bd-7980891e0e1d"
   },
   {
-   "id": "9c3489fb-2c3a-8c20-7e1b-7b284140fff4",
    "title": "Part 5: Corner Cases",
-   "pageId": "67a15c3a-771a-097d-ad1a-476c23205115",
-   "type": "page"
+   "id": "9c3489fb-2c3a-8c20-7e1b-7b284140fff4",
+   "type": "page",
+   "pageId": "67a15c3a-771a-097d-ad1a-476c23205115"
   },
   {
-   "id": "da2ccff1-d63a-344a-6ad0-99fc79277ad1",
    "title": "Conclusion",
-   "pageId": "5376c0ec-7cfc-e4b9-38c2-c578f69ce194",
-   "type": "page"
+   "id": "da2ccff1-d63a-344a-6ad0-99fc79277ad1",
+   "type": "page",
+   "pageId": "5376c0ec-7cfc-e4b9-38c2-c578f69ce194"
   },
   {
-   "id": "abba7473-126c-eb88-6142-b4028fb43d98",
    "title": "Optional challenge assignment",
-   "pageId": "1d4bc450-dd0e-5a86-3e94-bb45ae202247",
-   "type": "page"
+   "id": "abba7473-126c-eb88-6142-b4028fb43d98",
+   "type": "page",
+   "pageId": "1d4bc450-dd0e-5a86-3e94-bb45ae202247"
   }
  ]
 }

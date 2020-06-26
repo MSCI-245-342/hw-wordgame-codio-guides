@@ -1,6 +1,6 @@
 -----------------
 
-You've already met Sinatra.  Here's what's new in the Sinatra app skeleton [`app.rb`](../app.rb) that we provide for Hangperson:
+You've already met Sinatra.  Here's what's new in the Sinatra app skeleton [`app.rb`](../app.rb) that we provide for WordGame (open `app.rb` to read along):
 
 * `before do...end` is a block of code executed *before* every SaaS request
 
@@ -11,7 +11,7 @@ You've already met Sinatra.  Here's what's new in the Sinatra app skeleton [`app
 #### Self Check Question
 
 <details><summary><code>@game</code> in this context is an instance variable of what
-class?  (Careful-- tricky!)</summary><p><blockquote>It's an instance variable of the <code>HangpersonApp</code> class in the app.rb file.  Remember we are dealing with two Ruby classes here: the <code>HangpersonGame</code> class encapsulates the game logic itself (that is, the Model in model-view-controller), whereas <code>HangpersonApp</code> encapsulates the logic that lets us deliver the game as SaaS (you can roughly think of it as the Controller logic plus the ability to render the views via <code>erb</code>).</blockquote></p></details>
+class?  (Careful-- tricky!)</summary><p><blockquote>It's an instance variable of the <code>WordgameApp</code> class in the app.rb file.  Remember we are dealing with two Ruby classes here: the <code>WordGame</code> class encapsulates the game logic itself (that is, the Model in model-view-controller), whereas <code>WordgameApp</code> encapsulates the logic that lets us deliver the game as SaaS (you can roughly think of it as the Controller logic plus the ability to render the views via <code>erb</code>).</blockquote></p></details>
 
 The Session
 -----------
@@ -32,11 +32,11 @@ messages in the <code>session[]</code> hash?</summary><p><blockquote>When we put
 Running the Sinatra app
 -----------------------
 
-As before, run the shell command `bundle exec rackup --host 0.0.0.0` to start the app, or `bundle exec rerun -- rackup` if you want to rerun the app each time you make a code change.
+As before, run the shell command `bundle exec rackup --host 0.0.0.0` to start the app, or `bundle exec rerun -- rackup 0.0.0.0` if you want to rerun the app each time you make a code change.
 
 #### Self Check Question
 
-<details><summary>Based on the output from running this command, what is the full URL you need to visit in order to visit the New Game page?</summary><p><blockquote>The Ruby code <code>get '/new' do...</code> in <code>app.rb</code> renders the New Game page, so the full URL is in the form <code>http://localhost:9292/new</code></p></details>
+<details><summary>What is the full URL you need to visit in order to visit the New Game page? (See output of rackup to see the port.)</summary><p><blockquote>The Ruby code <code>get '/new' do...</code> in <code>app.rb</code> renders the New Game page, so the full URL is in the form <code>http://name1-name2-9292.codio.io/new</code>, where name1-name2 are for your Codio box and 9292 is the port.</p></details>
 <br />
 
 Visit this URL and verify that the Start New Game page appears.
@@ -53,9 +53,9 @@ But first, let's get our app onto Heroku.  This is actually a critical step.  We
 * First, run `bundle install` to make sure our Gemfile and Gemfile.lock are in sync.
 * Next, type `git add .` to stage all changed files (including Gemfile.lock)
 * Then type `git commit -m "Ready for Heroku!"` to commit all local changes.
-* Next, type `heroku login` and authenticate.
-* Since this is the first time we're telling Heroku about the Hangperson app, we must type `heroku create` to have Heroku prepare to recieve this code and to have it create a git reference for referencing the new remote repository.
+* Next, type `heroku login -i` and authenticate.
+* Since this is the first time we're telling Heroku about the Hangperson app, we must type `heroku create` to have Heroku prepare to recieve this code and to have it create a git reference for referencing the new remote repository.  Go ahead and click on the url to see the live app on the web.  At this stage, it is a blank Heroku placeholder.
 * Then, type `git push heroku master` to push your code to Heroku.
 * When you want to update Heroku later, you only need to commit your changes to git locally, then push to Heroku as in the last step.
-* Verify that the Heroku-deployed Hangperson behaves the same as your development version before continuing. A few lines up from the bottom of the Heroku output in the terminal should have a URL ending in herokuapp.com. Find that, copy it to the clipboard, and paste it into a browser tab to see the current app.
+* Verify that the Heroku-deployed WordGame behaves the same as your development version before continuing. A few lines up from the bottom of the Heroku output in the terminal should have a URL ending in herokuapp.com. Find that, copy it to the clipboard, and paste it into a browser tab to see the current app.
 * Verify the broken functionality by clicking the new game button.
