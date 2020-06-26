@@ -29,5 +29,130 @@
    "bloomsObjectiveLevel": "",
    "learningObjectives": ""
   }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-1301960768",
+  "source": {
+   "name": "bundle",
+   "showName": false,
+   "instructions": "What *two* steps did we take earlier to guarantee that the Sinatra library is available to load in line 1?",
+   "multipleResponse": true,
+   "answers": [
+    {
+     "_id": "028b2712-94ee-90b9-2d52-29ecc43c65d3",
+     "correct": false,
+     "answer": "We created a git repository."
+    },
+    {
+     "_id": "f3a62af9-e6f7-2351-dbe5-52ed5e428ff6",
+     "correct": true,
+     "answer": "We successfully ran <code>bundle</code> to confirm that the gem is installed and \"lock\" the correct version of it in <code>Gemfile.lock</code>"
+    },
+    {
+     "_id": "aed0ddf5-2ca1-8136-b0d9-ae3251f38cda",
+     "correct": false,
+     "answer": "We downloaded the Sinatra software and installed it."
+    },
+    {
+     "_id": "96ba6964-f912-d827-3c77-d5ac4523b29e",
+     "correct": false,
+     "answer": "We edited the `Gemfile.lock` file to list all of the gem versions we need for our project."
+    },
+    {
+     "_id": "0cc3bbf0-af83-9c32-a403-c3c6416d23ea",
+     "correct": true,
+     "answer": "We specified <code>gem 'sinatra'</code> in the <code>Gemfile</code>."
+    }
+   ],
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-4037569122",
+  "source": {
+   "name": "unknown route",
+   "showName": false,
+   "instructions": "What happens if you try to visit a non-root URL such as <code>https://yourcodio-boxname-9292.codio.io/hello</code>? (your URL root will vary based on what your Codio box is named)\n",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "30c51092-1df1-e0ae-bc6c-d1b01d3064be",
+     "correct": false,
+     "answer": "Nothing."
+    },
+    {
+     "_id": "ef3bc37b-d9f9-dc8a-dea4-746ac0459a9a",
+     "correct": true,
+     "answer": "I get a humorous error message from the Sinatra framework with guidance on how I might fix this issue. "
+    },
+    {
+     "_id": "a18424cd-0ed6-f40f-1822-1600f017d059",
+     "correct": false,
+     "answer": "I get a 404 Not Found ( https://en.wikipedia.org/wiki/HTTP_404 ) error."
+    }
+   ],
+   "guidance": "You'll get a humorous error message from the Sinatra framework, since you don't have a route matching <code>get '/hello'</code> in your app.  Since Sinatra is a SaaS framework, the error message is packaged up in a Web page and delivered to your browser.\n\nThe message you see is nice and friendly and gives you advice on coding your app, for this is the development version of your web app.  In the production version, the error message shows users a usual unfriendly error message (404, etc.).\n",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
+ },
+ {
+  "type": "free-text",
+  "taskId": "free-text-3816481341",
+  "source": {
+   "name": "MyApp URL",
+   "showName": true,
+   "instructions": "What is the URL of your myapp on Heroku?  Please copy and paste the full URL, e.g. https://hw7-myapp-msmucker.herokuapp.com/ .  We will visit this URL to check that you have properly deployed your app.",
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "previewType": "NONE",
+   "arePartialPointsAllowed": false,
+   "oneTimeTest": false,
+   "points": 5,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Free Text"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
  }
 ]

@@ -31,13 +31,13 @@ Let's start with the following steps:
 
 ```rb
 source 'https://rubygems.org'
-ruby '>= 2.2.0', '< 3.0.0'
+ruby '2.6.6'
 gem 'sinatra', '>= 2.0.1'
 ```
 
 The first line says that the preferred place to download any necessary gems is https://rubygems.org, which is where the Ruby community registers "production ready" gems.
 
-The second line specifies which version of the Ruby language interpreter is required.  If we omitted this line, Bundler wouldn't try to verify which version of Ruby is available; there are subtle differences between the versions, and not all gems work with all versions, so it's best to specify this.
+The second line specifies which version of the Ruby language interpreter is required.  If we omitted this line, Bundler wouldn't try to verify which version of Ruby is available; there are subtle differences between the versions, and not all gems work with all versions, so it's best to specify this.  The MSCI-245-S20 stack is currently configured to use 2.6.6 as the default version of Ruby.  This is the last version of Ruby to be produced before the next major version (v3).  There are some more recent versions of Ruby, e.g. 2.7.1, but all of the 2.7.x version are filled with warnings about deprecated features in the language, and we don't need to worry ourselves with those, and so 2.6.6 is the correct version for us.
 
 The last line says we need version 2.0.1 or later of the `sinatra` gem. In some cases we don't need to specify which version of a gem we want; in this case we do specify it because we rely on some features that are absent from earlier versions of Sinatra.
 
@@ -55,7 +55,9 @@ git commit -m "Set up the Gemfile"
 
 The first command stages all changed files for committing. The second command commits the staged files with the comment in the quotes. You can repeat these commands to commit future changes. Remember that these are LOCAL commits -- if you want these changes on GitHub, you'll need to do a git push command, which we will show later.
 
-#### Self Check Questions (click triangle to check your answer)
+## Self Check Questions (click on triangle to view answer)
+
+**Self check questions contain important information and should be used to gauge if you are ready to continue on the assignment.  Always try to answer the question yourself before viewing the answer.**
 
 <details><summary>What's the difference between the purpose and contents of <code>Gemfile</code> and <code>Gemfile.lock</code>?  Which file is needed to completely reproduce the development environment's gems in the production environment?</summary><p><blockquote><code>Gemfile</code> specifies the gems you need and in some cases the constraints on which version(s) are acceptable. <code>Gemfile.lock</code> records the *actual* versions found, not only of the gems you specified explicitly but also any other gems on which they depend, so it is the file used by the production environment to reproduce the gems available in the development environment.</blockquote></p></details>
 <br />
@@ -83,9 +85,13 @@ end
 
 The `get` method is provided by the `Sinatra::Base` class, from which our `MyApp` class inherits; `Sinatra::Base` is available because we load the Sinatra library on line 1.
 
-#### Self Check Question
+#### Self Check Question (graded)
+
+{Check It!|assessment}(multiple-choice-1301960768)
+<!-- If not on Codio, uncomment 
 
 <details><summary>What *two* steps did we take earlier to guarantee that the Sinatra library is available to load in line 1?</summary><p><blockquote> We specified <code>gem 'sinatra'</code> in the <code>Gemfile</code> *and* successfully ran <code>bundle</code> to confirm that the gem is installed and "lock" the correct version of it in <code>Gemfile.lock</code>.</blockquote></p></details>
+-->
 
 <br />
 
@@ -105,9 +111,11 @@ The first line tells Rack that our app lives in the file `app.rb`, which you cre
 If you're developing locally, you're now ready to test-drive our simple app with this command line: `$ bundle exec rackup` <br> This command starts the Rack appserver and the WEBrick webserver.  Prefixing it with `bundle exec` ensures that you are running with the gems specified in `Gemfile.lock`.  Rack will look for `config.ru` and attempt to start our app based on the information there. <br> If you're developing locally, you can visit `localhost:9292` in your browser to see the webapp. It will open in a new tab in the IDE if you click on it, but you should open up a fresh browser tab and paste in that URL. <br> Point a new Web browser tab at the running app's URL and verify that you can see "Hello World". </details>
 -->
 
-You're now ready to test-drive our simple app with this command line: `bundle exec rackup --host 0.0.0.0`. This command starts the Rack appserver and the WEBrick webserver.  Prefixing it with `bundle exec` ensures that you are running with the gems specified in `Gemfile.lock`.  Rack will look for `config.ru` and attempt to start our app based on the information there.
+You're now ready to test-drive our simple app with this command line: 
+`bundle exec rackup --host 0.0.0.0`. 
+The `rackup` command starts the Rack appserver and the WEBrick webserver.  Prefixing it with `bundle exec` ensures that you are running with the gems specified in `Gemfile.lock`.  Rack will look for `config.ru` and attempt to start our app based on the information there.  The host IP of `0.0.0.0` is special to Codio.  On other machines, you would leave out the `--host` information or use `localhost` or `127.0.0.1`, both of which mean "this machine".
 
-In Codio, you can configure a button for easy previewing. Click the drop down arrow on the middle button and click "New Browser Tab"
+In Codio, you can configure a button for easy previewing. Click the drop down arrow on the **middle** button and click "New Browser Tab"
 
 ![.guides/img/PreviewingApp](.guides/img/PreviewingApp.png)
 
@@ -119,13 +127,17 @@ Finally, go back into the same drop down and select "Box URL". The app should op
 
 Now, to preview the app, simply click the middle button that says "Box URL".
 
-You may get a warning, but because we are using port 9292, you can ignore that warning and continue.
+You may get a warning telling you that you'll need to be authenticated by Codio to view your URL.  This means you should always be logged in and using the same browser to view your website as you are using to connect to Codio.  You can safely ignore the warning.
 
 When you have succeeded, you should see "Hello World" in your browser at a url like `https://carlo-radio-9292.codio.io/` where "carlo-radio" is replaced with the name of your Codio box.
 
-#### Self Check Question
+#### Self Check Question (graded)
 
+{Check It!|assessment}(multiple-choice-4037569122)
+
+<!-- Uncomment if not on Codio:
 <details><summary>What happens if you try to visit a non-root URL such as <code>https://yourcodio-boxname-9292.codio.io/hello</code> and why? (your URL root will vary based on what your Codio box is named)</summary><p><blockquote> You'll get a humorous error message from the Sinatra framework, since you don't have a route matching <code>get '/hello'</code> in your app.  Since Sinatra is a SaaS framework, the error message is packaged up in a Web page and delivered to your browser.</blockquote></p></details>
+-->
 
 <br />
 
@@ -172,7 +184,9 @@ The MSCI-245-S20 stack already has the Heroku CLI (command line interface) insta
 
 Log in to your Heroku account by typing the command: `heroku login -i` in the terminal. This will connect you to your Heroku account.
 
-While in the root directory of your project (the `myapp` directory, not your whole workspace), type `heroku create` to create a new project in Heroku. This will tell the Heroku service to prepare for some incoming code, and locally it will add a remote git repository for you called `heroku`.
+While in the root directory of your project (the `myapp` directory, not your whole workspace), type `heroku apps:create hw7-myapp-watiamUsername` to create a new project in Heroku.  Replace "watiamUsername" with your WatIAM username.  This will tell the Heroku service to prepare for some incoming code, and locally it will add a remote git repository for you called `heroku`.  Detailed [instructions](https://devcenter.heroku.com/articles/creating-apps).
+
+{Submit Answer!|assessment}(free-text-3816481341)
 
 Before doing anything else, record the URL that Heroku provides telling you where to access your app on the web.
 
@@ -188,15 +202,13 @@ This tells Heroku to start a single web worker (Dyno) using essentially the same
 
 Be sure to add Procfile to git and commit it.  Run `git status` to verify you haven't forgotten to commit something.  We send the whole git repo to Heroku, and if you haven't committed something, it doesn't go!
 
-Your local repo is now ready to deploy to Heroku:
+Your local repo is now ready to deploy to Heroku. To deploy, push the repo to Heroku:
 
 ```
 git push heroku master
 ```
 
 (`master` refers to which branch of the remote Heroku repo we are pushing to.  We'll learn about branches later in the course, but for now, suffice it to say that you can only deploy to the `master` branch on Heroku.) This push will create a running instance of your app at some URL ending with `herokuapp.com`. Enter that URL in a new browser tab to see your app running live. Congratulations, you did it--your app is live!
-
-If you forgot to write down the URL Heroku gave your for your app, you can see all your Heroku apps by running `heroku apps`.  The URL is https://appname.herokuapp.com/ , where appname is replaced with the name of your app.
 
 Summary
 -------
