@@ -1,7 +1,7 @@
 ----------------
-With all this machinery in mind, lets get a new repo to clone from GitHub here: XXXXXXXXXX
+With all this machinery in mind, lets get a new repo to clone from GitHub here: https://classroom.github.com/a/Qa593oDd
 
-clone this repo and let's work on Wordgame.
+Now clone this repo and let's work on Wordgame:
 
 ```sh
 git clone link-from-github
