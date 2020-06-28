@@ -95,4 +95,4 @@ While you're here, read the comments in the file. They give clues for future ste
 
 When finished adding that code, verify that all the steps in `features/guess.feature` now pass by running cucumber for that .feature file.
 
-* Debugging tip: The Capybara command `save_and_open_page` placed in a step definition will cause the step to open a Web browser window showing what the page looks like at that point in the scenario.  The functionality is provided in part by a gem called `launchy` which is in the Gemfile.
+* Debugging tip: The Capybara command `save_and_open_page` placed in a step definition will cause the step to open a Web browser window showing what the page looks like at that point in the scenario.  The functionality is provided in part by a gem called `launchy` which is in the Gemfile. (This may not work on Codio.)

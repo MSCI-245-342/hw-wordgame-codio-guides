@@ -1,6 +1,6 @@
 ------------
 
-This assignment has served as a microcosm or miniature tour of the entire course: during the rest of the course we will investigate each of these in much more detail, and we will also add new techniques---
+This assignment has served as a microcosm or miniature tour of software development that is covered in MSCI 245 and 342 (software engineering): we will investigate each of these in much more detail, and we will also add new techniques---
 
 * *Test-driven development (TDD)* will let you write much more detailed tests for your code and determine its **coverage**, that is, how thoroughly your tests exercise your code.  We will use **RSpec** to do test-first development, in which we write tests before we write the code, watch the test fail ("red"), quickly write just enough code to make the test pass ("green"), clean up (refactor) the code, and go on to the next test.  We will use the `autotest` tool to help us get into a rhythm of red--green--refactor. In this assignment we provided the specs for you; when designing your own app, you'll write them yourself.
 

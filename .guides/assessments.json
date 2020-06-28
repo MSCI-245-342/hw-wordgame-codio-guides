@@ -5,7 +5,7 @@
   "source": {
    "name": "Grader",
    "showName": false,
-   "instructions": "To submit your deployed Heroku app, paste the URL into the file on the left (it should look something like `my-app-12345.herokuapp.com`).\n\nVisit the same URL that you put into the text file with your web browser to be sure that your app is running correctly at that address before submitting the text file.\n\nSubmit by clicking the button below.",
+   "instructions": "To submit your deployed Heroku app, paste the hostname only into the sinatra-url.txt file that we've opened on the left. You should paste in something like `hw-wordgame-watiamUserame.herokuapp.com`.  Do not include the https:// nor the trailing /.\n\nVisit the same URL that you put into the text file with your web browser to be sure that your app is running correctly at that address before submitting the text file.  \n\nSave the text file.\n\nSubmit by clicking the button below.",
    "command": ".guides/gradescope.py sinatra-url.txt",
    "arePartialPointsAllowed": true,
    "timeoutSeconds": 40,
@@ -24,7 +24,13 @@
      "sinatra-url.txt",
      "hw-sinatra-saas-hangperson/lib/hangperson_game.rb"
     ],
-    "opened": []
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "sinatra-url.txt"
+     }
+    ]
    },
    "bloomsObjectiveLevel": "",
    "learningObjectives": ""
@@ -190,6 +196,33 @@
      {
       "name": "Assessment Type",
       "value": "Multiple Choice"
+     }
+    ],
+    "files": [],
+    "opened": []
+   },
+   "bloomsObjectiveLevel": "",
+   "learningObjectives": ""
+  }
+ },
+ {
+  "type": "free-text",
+  "taskId": "free-text-3032828860",
+  "source": {
+   "name": "WordGame URL",
+   "showName": false,
+   "instructions": "What is the URL of your WordGame app on Heroku? Please copy and paste the full URL, e.g. https://hw7-wordgame-msmucker.herokuapp.com/ . You will need to provide this again later in the assignment for testing, but entering here helps us when we need to check that you have properly deployed your app.  ",
+   "guidance": "",
+   "showGuidanceAfterResponse": false,
+   "previewType": "NONE",
+   "arePartialPointsAllowed": false,
+   "oneTimeTest": false,
+   "points": 1,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Free Text"
      }
     ],
     "files": [],
