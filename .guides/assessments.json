@@ -6,7 +6,7 @@
    "name": "Grader",
    "showName": false,
    "instructions": "To submit your deployed Heroku app, paste the hostname only into the sinatra-url.txt file that we've opened on the left. You should paste in something like `hw-wordgame-watiamUserame.herokuapp.com`.  Do not include the https:// nor the trailing /.\n\nVisit the same URL that you put into the text file with your web browser to be sure that your app is running correctly at that address before submitting the text file.  \n\nSave the text file.\n\nSubmit by clicking the button below.",
-   "command": ".guides/gradescope.py sinatra-url.txt",
+   "command": ".guides/secure/gradescope.py sinatra-url.txt",
    "arePartialPointsAllowed": true,
    "timeoutSeconds": 40,
    "guidance": "",
