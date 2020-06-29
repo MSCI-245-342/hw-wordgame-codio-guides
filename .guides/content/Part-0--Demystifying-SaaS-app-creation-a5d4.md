@@ -21,7 +21,7 @@ Let's start with the following steps:
 
   ![.guides/img/newProject](.guides/img/newProject.png)
   
-  You will follow along in this new browser tab for the rest of the project.
+**You will do your work in this new browser tab for the rest of the project.  Do not attempt to do the work in the same project as the Codio instructions.**
 
 * Open up a terminal.  You can access the terminal in Codio (where you would type this command) through the top tool bar Tools > Terminal.
 
@@ -62,6 +62,8 @@ The first command stages all changed files for committing. The second command co
 <details><summary>What's the difference between the purpose and contents of <code>Gemfile</code> and <code>Gemfile.lock</code>?  Which file is needed to completely reproduce the development environment's gems in the production environment?</summary><p><blockquote><code>Gemfile</code> specifies the gems you need and in some cases the constraints on which version(s) are acceptable. <code>Gemfile.lock</code> records the *actual* versions found, not only of the gems you specified explicitly but also any other gems on which they depend, so it is the file used by the production environment to reproduce the gems available in the development environment.</blockquote></p></details>
 <br />
 <details><summary>After running <code>bundle</code>, why are there gems listed in <code>Gemfile.lock</code>that were not listed in <code>Gemfile</code>?</summary><p><blockquote>Bundler looked up the information for each Gem you requested (in this case, only <code>sinatra</code>) and realized that it depends on other gems, which in turn depend on still others, so it recursively installed all those dependencies.  For example, the <code>rack</code> appserver is a gem, and while you didn't explicitly request it, <code>sinatra</code> depends on it.  This is an example of the power of automation: rather than requiring you (the app developer) to understand every Gem dependency, Bundler automates that process and lets you focus only on your app's top-level dependencies.</blockquote></p></details>
+
+#### Self Check Question (graded)
 
 {Check It!|assessment}(multiple-choice-3608127739)
 

@@ -23,13 +23,13 @@ After completing this assignment, you will be able to:
 Prerequisites
 -------------
 * You should be familiar with Ruby basics, for example by completing the Ruby Intro or Ruby Calisthenics assignment.
-* You should have read [ESaaS](http://www.saasbook.info) Chapter 2, "The Architecture of SaaS Applications", and watched the accompanying videos in the [MOOC](http://www.saas-class.org).
-* You should be comfortable with basic Git usage and how to push your code to GitHub, as described in Appendix A of [ESaaS](http://www.saasbook.info).
+* You should have read [ESaaS](http://www.saasbook.info) Chapter 2, "The Architecture of SaaS Applications", and watched the accompanying videos as provided in Learn.
+* You should be comfortable with basic Git usage and how to push your code to GitHub, as described in Appendix A of [ESaaS](http://www.saasbook.info) and HW1.
 * You will need "survival level" Unix command-line skills and facility with an editor to edit code files.
 
 **NOTE:** 
 
-1. You may find the [Sinatra documentation](https://sinatrarb.com) helpful to have on hand.
+1. You may find the [Sinatra documentation](http://sinatrarb.com) helpful to have on hand.
 
 1. I highly recommend also reading [Chapter 14](https://learning.oreilly.com/library/view/head-first-ruby/9781449372644/ch14.html) of [Head First Ruby](https://learning.oreilly.com/library/view/head-first-ruby/9781449372644/).  This chapter paints a clear picture of how web apps and Sinatra in particular work.  Reminder: All UWaterloo students have free access to this and other books at O'Reilly.
 
