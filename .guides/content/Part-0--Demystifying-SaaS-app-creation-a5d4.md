@@ -92,10 +92,6 @@ The `get` method is provided by the `Sinatra::Base` class, from which our `MyApp
 #### Self Check Question (graded)
 
 {Check It!|assessment}(multiple-choice-1301960768)
-<!-- If not on Codio, uncomment 
-
-<details><summary>What *two* steps did we take earlier to guarantee that the Sinatra library is available to load in line 1?</summary><p><blockquote> We specified <code>gem 'sinatra'</code> in the <code>Gemfile</code> *and* successfully ran <code>bundle</code> to confirm that the gem is installed and "lock" the correct version of it in <code>Gemfile.lock</code>.</blockquote></p></details>
--->
 
 <br />
 
@@ -109,11 +105,6 @@ run MyApp
 ```
 
 The first line tells Rack that our app lives in the file `app.rb`, which you created above to hold your app's code.  We have to explicitly state that our `app` file is located in the current directory (.) because `require` normally looks only in standard system directories to find gems.
-
-<!--
-<details><summary>If you are developing locally</summary>
-If you're developing locally, you're now ready to test-drive our simple app with this command line: `$ bundle exec rackup` <br> This command starts the Rack appserver and the WEBrick webserver.  Prefixing it with `bundle exec` ensures that you are running with the gems specified in `Gemfile.lock`.  Rack will look for `config.ru` and attempt to start our app based on the information there. <br> If you're developing locally, you can visit `localhost:9292` in your browser to see the webapp. It will open in a new tab in the IDE if you click on it, but you should open up a fresh browser tab and paste in that URL. <br> Point a new Web browser tab at the running app's URL and verify that you can see "Hello World". </details>
--->
 
 You're now ready to test-drive our simple app with this command line: 
 `bundle exec rackup --host 0.0.0.0`. 
