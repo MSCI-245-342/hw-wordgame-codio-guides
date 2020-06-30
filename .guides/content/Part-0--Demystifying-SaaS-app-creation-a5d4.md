@@ -130,10 +130,6 @@ When you have succeeded, you should see "Hello World" in your browser at a url l
 
 {Check It!|assessment}(multiple-choice-4037569122)
 
-<!-- Uncomment if not on Codio:
-<details><summary>What happens if you try to visit a non-root URL such as <code>https://yourcodio-boxname-9292.codio.io/hello</code> and why? (your URL root will vary based on what your Codio box is named)</summary><p><blockquote> You'll get a humorous error message from the Sinatra framework, since you don't have a route matching <code>get '/hello'</code> in your app.  Since Sinatra is a SaaS framework, the error message is packaged up in a Web page and delivered to your browser.</blockquote></p></details>
--->
-
 <br />
 
 You should now have the following files under version control: `Gemfile`, `Gemfile.lock`, `app.rb`, `config.ru`. (To check, do `git status`.  If there are changes to be committed or these files are untracked, remember to `git add` then `git commit`.  We are not connected to GitHub or any other remote repo, and so you do not push.) 
