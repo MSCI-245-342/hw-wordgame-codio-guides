@@ -53,7 +53,7 @@ But first, let's get our app onto Heroku.  This is actually a critical step.  We
 * Next, type `git add .` to stage all changed files (including Gemfile.lock)
 * Then type `git commit -m "Ready for Heroku!"` to commit all local changes.
 * Next, type `heroku login -i` and authenticate.
-* Since this is the first time we're telling Heroku about the Hangperson app, we must type `heroku apps:create hw7-wordgame-watiamUsername` to create a new project in Heroku.  Replace "watiamUsername" with your WatIAM username. This will have Heroku prepare to recieve this code and have it create a git reference for referencing the new remote repository.  Go ahead and click on the url to see the live app on the web.  At this stage, it is a blank Heroku placeholder.
+* Since this is the first time we're telling Heroku about the WordGame app, we must type `heroku apps:create hw7-wordgame-watiamUsername` to create a new project in Heroku.  Replace "watiamUsername" with your WatIAM username. This will have Heroku prepare to recieve this code and have it create a git reference for referencing the new remote repository.  Go ahead and click on the url to see the live app on the web.  At this stage, it is a blank Heroku placeholder.
 * Then, type `git push heroku master` to push your code to Heroku.
 * When you want to update Heroku later, you only need to commit your changes to git locally, then push to Heroku as in the last step.
 * Verify that the Heroku-deployed WordGame behaves the same as your development version before continuing. A few lines up from the bottom of the Heroku output in the terminal should have a URL ending in herokuapp.com. Find that, copy it to the clipboard, and paste it into a browser tab to see the current app.
